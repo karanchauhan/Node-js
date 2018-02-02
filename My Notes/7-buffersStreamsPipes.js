@@ -28,7 +28,7 @@ readStream.on('data', function(block) {
 
 var server = http.createServer(function(req, res) {
   res.writeHead(200,{'Content-Type':'text/plain'});
-  readStream.pipe(res);
+  readStream.pipe(res); // since res is a writable Stream
 });
 
 server.listen(48080, '127.0.0.1');
