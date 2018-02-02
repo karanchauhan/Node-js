@@ -1,5 +1,7 @@
 var http = require('http');
 var fs = require('fs');
+//tell express to use ejs as view engine
+app.set('view engine', 'ejs');
 
 var server = http.createServer(function(req, res) {
 
